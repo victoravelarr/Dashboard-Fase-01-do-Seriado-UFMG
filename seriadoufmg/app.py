@@ -156,9 +156,9 @@ if nome_input:
 
   st.markdown("---")
 
-  acima = df[df["nota"] < nota].sort_values(by="nota", ascending=False).head(5)
+  acima = df[df["nota"] > nota].sort_values(by="nota", ascending=False).head(5)
   igual = df[df["nota"] == nota].head(5)
-  abaixo = abaixo = df[df["nota"] > nota].sort_values(by="nota", ascending=True).head(5)
+  abaixo = abaixo = df[df["nota"] < nota].sort_values(by="nota", ascending=True).head(5)
 
   def tabela(df_slice):
     return df_slice[["nome", "nota"]].reset_index(drop=True)
