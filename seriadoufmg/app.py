@@ -1,6 +1,4 @@
-import plotly
 import streamlit as st
-st.write(plotly.__version__)
 import pandas as pd
 import numpy as np
 import plotly.express as px
